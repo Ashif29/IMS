@@ -9,3 +9,9 @@ API/IMS/IMS.Api/IMS.Api.csproj.user
 /API/IMS/IMS.EntityFrameworkCore/obj
 /API/IMS/IMS.Domain/obj/Debug/net8.0
 /API/IMS/IMS.Domain/obj
+*.TMP
+/API/IMS/IMS.EntityFrameworkCore/bin/Debug/net8.0
+/API/IMS/IMS.Api/bin/Debug/net8.0
+/API/IMS/IMS.Application/bin/Debug/net8.0
+/API/IMS/IMS.Domain/bin/Debug/net8.0
+/API/IMS/.vs/IMS/config

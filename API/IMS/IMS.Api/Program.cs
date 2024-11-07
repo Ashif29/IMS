@@ -3,6 +3,11 @@ using Microsoft.OpenApi.Models;
 using System.Text.Json.Serialization;
 using System;
 using IMS.EntityFrameworkCore.Data;
+using IMS.Domain.Repositories;
+using WafiArche.EntityFrameworkCore.Repositories;
+using IMS.Application.Mappings;
+using IMS.Application.Products;
+using IMS.Domain.Products;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,14 +26,14 @@ options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
 });
 
 // Register AutoMapper
-//builder.Services.AddAutoMapper(typeof(MappingProfile));
+builder.Services.AddAutoMapper(typeof(MappingProfile));
 
-//builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-//builder.Services.AddScoped<IProductAppService, ProductAppService>();
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+builder.Services.AddScoped<IProductAppService, ProductAppService>();
 
 
 
-//builder.Services.AddScoped<IProductManager, ProductManager>();
+builder.Services.AddScoped<IProductManager, ProductManager>();
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

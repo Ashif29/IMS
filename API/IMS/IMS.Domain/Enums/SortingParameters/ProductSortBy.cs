@@ -11,6 +11,5 @@ namespace IMS.Domain.Enums.SortingParameters
         //name must be matched to the database column name.
         Name = 1,
         SalePrice = 2,
-        PurchasePrice = 3,
     }
 }
